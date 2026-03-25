@@ -1,0 +1,238 @@
+{
+  "common": {
+    "admin_password": "0000",
+    "logging_level": "DEBUG",
+    "users_delete_to_recycle_dir": false
+  },
+  "actions": {
+    "image": [],
+    "collage": [
+      {
+        "name": "Attempt at Good canvas",
+        "jobcontrol": {
+          "countdown_capture": 2.0,
+          "countdown_capture_second_following": 1.0,
+          "ask_approval_each_capture": false,
+          "approve_autoconfirm_timeout": 15.0,
+          "show_individual_captures_in_gallery": false
+        },
+        "processing": {
+          "capture_remove_background": false,
+          "capture_fill_background_enable": false,
+          "capture_fill_background_color": "#e4e8e6",
+          "capture_img_background_enable": false,
+          "capture_img_background_file": null,
+          "canvas_width": 230,
+          "canvas_height": 692,
+          "merge_definition": [
+            {
+              "description": "top",
+              "pos_x": 8,
+              "pos_y": 4,
+              "pos_z": 0,
+              "width": 218,
+              "height": 120,
+              "rotate": 0,
+              "predefined_image": null,
+              "image_filter": "original"
+            },
+            {
+              "description": "second",
+              "pos_x": 8,
+              "pos_y": 128,
+              "pos_z": 0,
+              "width": 218,
+              "height": 120,
+              "rotate": 0,
+              "predefined_image": null,
+              "image_filter": "original"
+            },
+            {
+              "description": "third",
+              "pos_x": 8,
+              "pos_y": 252,
+              "pos_z": 0,
+              "width": 218,
+              "height": 120,
+              "rotate": 0,
+              "predefined_image": null,
+              "image_filter": "original"
+            },
+            {
+              "description": "fourth",
+              "pos_x": 8,
+              "pos_y": 366,
+              "pos_z": 0,
+              "width": 218,
+              "height": 120,
+              "rotate": 0,
+              "predefined_image": null,
+              "image_filter": "original"
+            },
+            {
+              "description": "fifth",
+              "pos_x": 10,
+              "pos_y": 490,
+              "pos_z": 0,
+              "width": 210,
+              "height": 210,
+              "rotate": 0,
+              "predefined_image": "userdata\\Real\\Logo_no_text.png",
+              "image_filter": "original"
+            }
+          ],
+          "canvas_fill_background_enable": true,
+          "canvas_fill_background_color": "#e4e8e6",
+          "canvas_img_background_enable": false,
+          "canvas_img_background_file": null,
+          "canvas_img_front_enable": false,
+          "canvas_img_front_file": null,
+          "canvas_texts_enable": true,
+          "canvas_texts": []
+        },
+        "trigger": {
+          "ui_trigger": {
+            "show_button": false,
+            "title": "AHHHH",
+            "icon": "auto_awesome_mosaic",
+            "use_custom_color": false,
+            "custom_color": "#196cb0"
+          },
+          "keyboard_trigger": {
+            "keycode": "c"
+          },
+          "gpio_trigger": {
+            "pin": "22",
+            "trigger_on": "pressed"
+          }
+        }
+      }
+    ],
+    "animation": [],
+    "video": [],
+    "multicamera": []
+  },
+  "share": {
+    "sharing_enabled": true,
+    "actions": [
+      {
+        "name": "Printing",
+        "handles_images_only": true,
+        "processing": {
+          "share_command": "echo {filename} media_type={media_type} action_config_name={action_config_name} copies=2",
+          "printer_name": "PDF",
+          "check_if_printer_is_idle": false,
+          "ask_user_for_parameter_input": false,
+          "parameters_dialog_caption": "Make your choice!",
+          "parameters_dialog_action_icon": "print",
+          "parameters_dialog_action_label": "GO",
+          "parameters": [
+            {
+              "key": "copies",
+              "label": "Copies",
+              "ui_type": "int",
+              "default": "1",
+              "valid_min": "1",
+              "valid_max": "3"
+            }
+          ],
+          "share_blocked_time": 3,
+          "max_shares": 0
+        },
+        "trigger": {
+          "ui_trigger": {
+            "show_button": false,
+            "title": "Direct Print",
+            "icon": "print",
+            "use_custom_color": false,
+            "custom_color": "#196cb0"
+          },
+          "keyboard_trigger": {
+            "keycode": "c"
+          },
+          "gpio_trigger": {
+            "pin": "23",
+            "trigger_on": "pressed"
+          }
+        }
+      }
+    ]
+  },
+  "mediaprocessing": {
+    "full_still_length": 1500,
+    "preview_still_length": 1200,
+    "thumbnail_still_length": 400,
+    "video_bitrate": 3000,
+    "video_compatibility_mode": false,
+    "remove_background_model": "modnet",
+    "fileformat_animations": "webp",
+    "fileformat_multicamera": "mp4"
+  },
+  "uisettings": {
+    "PRIMARY_COLOR": "#196cb0",
+    "SECONDARY_COLOR": "#4283b8",
+    "theme": "system",
+    "show_gallery_on_frontpage": false,
+    "show_admin_on_frontpage": true,
+    "admin_button_invisible": false,
+    "show_frontpage_timeout": 1,
+    "enable_automatic_slideshow": true,
+    "show_automatic_slideshow_timeout": 60,
+    "enable_livestream_when_idle": true,
+    "enable_livestream_when_active": true,
+    "livestream_mirror_effect": true,
+    "livestream_blurredbackground": false,
+    "livestream_blurredbackground_high_framerate": false,
+    "enable_livestream_frameoverlay": false,
+    "livestream_frameoverlay_image": "userdata\\demoassets\\frames\\frame_image_photobooth-app.png",
+    "livestream_frameoverlay_mirror_effect": false,
+    "FRONTPAGE_TEXT": "<div class=\"fixed-center text-h2 text-weight-bold text-center text-white\" style=\"text-shadow: 4px 4px 4px #666;\">Click the Button to start taking Photos</div>",
+    "TAKEPIC_MSG_TIME": 0.5,
+    "TAKEPIC_MSG_TEXT": "📷",
+    "AUTOCLOSE_NEW_ITEM_ARRIVED": 20,
+    "GALLERY_EMPTY_MSG": "<div class=\"fixed-center text-h2 text-weight-bold text-center text-white\" style=\"text-shadow: 4px 4px 4px #666;\">Empty, Zero, Nada! 🤷‍♂️<br>Let's take some pictures! <br>📷💕</div>",
+    "gallery_show_qrcode": false,
+    "qrcode_text_above": "👋 Download your photo!",
+    "qrcode_text_below": "Scan above code with your phone.",
+    "qrcode_link_codes": false,
+    "gallery_show_filter": false,
+    "gallery_show_download": false,
+    "gallery_show_delete": false,
+    "gallery_show_shareprint": false
+  },
+  "backends": {
+    "enable_livestream": true,
+    "retry_capture": 3,
+    "countdown_camera_capture_offset": 0.2,
+    "index_backend_stills": 0,
+    "index_backend_video": 0,
+    "index_backend_multicam": 0,
+    "group_backends": [
+      {
+        "enabled": true,
+        "description": "backend default name",
+        "backend_config": {
+          "orientation": "1: 0°",
+          "backend_type": "VirtualCamera",
+          "framerate": 5,
+          "emulate_hires_static_still": false,
+          "emulate_multicam_capture_devices": 2
+        }
+      }
+    ]
+  },
+  "hardwareinputoutput": {
+    "keyboard_input_enabled": true,
+    "gpio_enabled": false,
+    "gpio_pin_shutdown": 17,
+    "gpio_pin_reboot": 18,
+    "gpio_pin_job_next": 27,
+    "gpio_pin_job_reject": 22,
+    "gpio_pin_job_abort": 20
+  },
+  "misc": {
+    "secret_key": "ThisIsTheDefaultSecret",
+    "cmd_shutdown": "shutdown now",
+    "cmd_reboot": "reboot"
+  }
+}
