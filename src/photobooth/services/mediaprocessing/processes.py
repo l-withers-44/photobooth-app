@@ -135,6 +135,8 @@ def process_and_generate_collage(files_in: list[Path], mediaitem: Mediaitem):
     pipeline(context)
 
     canvas = context.canvas
+    
+    canvas.save("C:\\Users\\louis\\Documents\\GitHub\\photobooth-app\\output1.png")
 
     ## phase 2
     context = ImageContext(canvas, False)
@@ -165,7 +167,16 @@ def process_and_generate_collage(files_in: list[Path], mediaitem: Mediaitem):
 
     ## create mediaitem
     canvas = canvas.convert("RGB") if canvas.mode in ("RGBA", "P") else canvas
-    encode([canvas], mediaitem.unprocessed)
+    
+    ## add second canvas to item
+    canvas_width = canvas.width
+    canvas_height = canvas.height
+    double_canvas = Image.new("RGB", (2*canvas_width, canvas_height), "white")
+    
+    double_canvas.paste(canvas, (0, 0))
+    double_canvas.paste(canvas, (canvas_width, 0))
+
+    encode([double_canvas], mediaitem.unprocessed)
     # complete processed version (unprocessed and processed are same here for this one)
     shutil.copy2(mediaitem.unprocessed, mediaitem.processed)
 

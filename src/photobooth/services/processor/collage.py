@@ -108,6 +108,7 @@ class JobModelCollage(JobModelBase[CollageConfigurationSet]):
             processed=Path(PATH_PROCESSED, original_filenamepath),
             pipeline_config=self._configuration_set.processing.model_dump(mode="json"),
         )
+    
 
         process_and_generate_collage([item.processed for item in phase1_mediaitems], phase2_mediaitem)
 

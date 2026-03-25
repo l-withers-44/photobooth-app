@@ -9,10 +9,10 @@ logger = logging.getLogger(__name__)
 
 
 FORMAT_OPTIONS = {
-    ".jpg": {"quality": 90, "optimize": True},
+    ".jpg": {"quality": 95, "optimize": True},
     ".gif": {"optimize": True},
-    ".webp": {"quality": 90, "method": 0, "lossless": False},
-    ".avif": {"quality": 90, "speed": 10, "lossless": False},
+    ".webp": {"quality": 95, "method": 0, "lossless": False},
+    ".avif": {"quality": 95, "speed": 10, "lossless": False},
 }
 
 

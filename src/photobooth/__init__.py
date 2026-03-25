@@ -10,6 +10,7 @@ locale.setlocale(locale.LC_ALL, "")
 DATABASE_PATH = "./database/"
 # mediaitems cache for resized versions
 CACHE_PATH = "./cache/"
+# TODO: EDIT ME
 # media collection files
 MEDIA_PATH = "./media/"
 PATH_CAMERA_ORIGINAL = "".join([MEDIA_PATH, "camera_original/"])
